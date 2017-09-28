@@ -1,0 +1,16 @@
+language: node_js
+dist: trusty
+node_js: '6'
+before_script: npm install
+script:
+- npm run test
+- npm run build
+after_success: npm run coverage
+deploy:
+  provider: npm
+  email: sebastian.lzy@gmail.com
+  api_key:
+    secure: 3W4BTDnwucRaE2vYRmrrZ9xoO9wNuhY/6Paar7jSx5FwOKxCcyAIBom/2bP3RsJcAjsTac7actRx01NeEhVEqcPXTwc5i5OgPxhSP9TF2V0VI/Iw2oHJdIFqX99bNolC622ZfP+pKtLme9DEUy2ZOwGaTXsbojMyP3QOY8GAOCErr4eXeJYlalscFnNTBo6UMdb/oPB0jEuMGpxg1vPx61L0CIVUJQjLZdl3teyHAdHsfCk3u3FEG/kzaC2e5rdZye9etS86K3yF8nYRroTipyE9Ny2pogK4cKDJonveQmeO64uNTcU0OmWTGaCb6ww8isPuml+12WKMhl4mOWuM+dcAKKmUQl8Fe5a9pGg2y8L1aJz1iMF0VUgaQuLHy/vebBE0Zun1c33nWK74EhYcU4K7lXtNjqOOvC97Dr2fwKJ8cXp0rGU2JEDvEWCKLPOc6wtsWsSmCU00KOFONEJYVJmDOcl1G06nPqhEKrAkihErgsIgWh1tcXliLdSdy8BUx4iEa2TNucUKpJjU+IOoh5duOVbVBv1YrbhXT94uXLntedzpeMhML10yUeM810AUlaSZgS7Kr//UhBPrt6BF75W0GfSk4HMF8BPBBn/F0ybttfbzaNd6mW3HWb1ndRM/U64nVD08bM6C+BQhv+tLy8zoPbEexCfWxMPDHbNo0yU=
+  on:
+    tags: true
+    repo: sebastianlzy/json-hashable

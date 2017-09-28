@@ -1,4 +1,8 @@
-# Make stable hashable JSON
+# Hashable JSON
+
+[![Build Status](https://travis-ci.org/sebastianlzy/json-hashable.svg?branch=master)](https://travis-ci.org/sebastianlzy/json-hashable)
+
+[![Coverage Status](https://coveralls.io/repos/github/sebastianlzy/json-hashable/badge.svg?branch=master)](https://coveralls.io/github/sebastianlzy/json-hashable?branch=master)
 
 
 ### Introduction
