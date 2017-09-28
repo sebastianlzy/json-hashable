@@ -1,6 +1,6 @@
 {
   "name": "json-hashable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "stable json hash",
   "main": "lib/index.js",
   "license": "MIT",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage && cat ./coverage/lcov.txt | coveralls",
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:watch": "jest --watch",
     "build": "babel ./index.js -d lib"
   },
