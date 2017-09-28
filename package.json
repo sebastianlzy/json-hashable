@@ -1,6 +1,6 @@
 {
   "name": "json-hashable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "stable json hash",
   "main": "lib/index.js",
   "license": "MIT",
