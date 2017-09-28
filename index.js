@@ -21,7 +21,6 @@ const sortObject = (value, key, obj) => {
 }
 
 const traverseObject = (obj) => {
-  
   if (isArray(obj)) {
     obj.forEach((value, idx) => {
       sortObject(value, idx, obj);
@@ -45,6 +44,5 @@ export default function (obj) {
     return JSON.stringify(sortObjectByKey(sortedObject));
   }
 
-  
   return JSON.stringify(sortedObject);
 }
