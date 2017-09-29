@@ -16,7 +16,10 @@ const isArray = (value) => (value instanceof Array)
 const sortObject = (value, key, obj) => {
   if (value) {      
     traverseObject(value);
-    obj[key] = sortObjectByKey(value);
+    if (isObject(value)) {
+      obj[key] = sortObjectByKey(value);
+    }
+    
   }
 }
 
