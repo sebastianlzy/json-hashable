@@ -1,7 +1,7 @@
 import hash from "./index";
 
 test("one level, hash to be the same", () => {
-  expect(hash({ b: "bbb", a: "aaa" })).toEqual(hash({ a: "aaa", b: "bbb" }));
+  expect(hash({b: "bbb", a: "aaa"})).toEqual(hash({a: "aaa", b: "bbb"}));
 });
 
 test("two level, hash to be the same", () => {
@@ -126,7 +126,7 @@ test("two level array, hash to be the same", () => {
   expect(
     hash([
       {
-        b: [{ d: "ddd", c: "ccc" }],
+        b: [{d: "ddd", c: "ccc"}],
         a: "aaa"
       }
     ])
@@ -134,7 +134,7 @@ test("two level array, hash to be the same", () => {
     hash([
       {
         a: "aaa",
-        b: [{ c: "ccc", d: "ddd" }]
+        b: [{c: "ccc", d: "ddd"}]
       }
     ])
   );
@@ -144,7 +144,7 @@ test("three level array, hash to be the same", () => {
   expect(
     hash([
       {
-        b: [{ d: ["f", "g", { e: "eee", h: "hhh" }], c: "ccc" }],
+        b: [{d: ["f", "g", {e: "eee", h: "hhh"}], c: "ccc"}],
         a: "aaa"
       }
     ])
@@ -152,8 +152,36 @@ test("three level array, hash to be the same", () => {
     hash([
       {
         a: "aaa",
-        b: [{ c: "ccc", d: ["f", "g", { h: "hhh", e: "eee" }] }]
+        b: [{c: "ccc", d: ["f", "g", {h: "hhh", e: "eee"}]}]
       }
     ])
   );
+});
+
+test("one level number, hash to be the same", () => {
+
+
+  expect(hash({
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    'X-Shopback-Country': 'VR',
+    'X-Shopback-Domain': 'www.test.co.id',
+    'X-Shopback-Language': 'id',
+    'X-Shopback-Agent': 'asd/1.0',
+    'X-Shopback-Internal': '123123123123',
+    categoryId: 123123,
+    priority: 3,
+    domain: 'www.test.co.id'
+  })).toEqual(hash({
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    'X-Shopback-Country': 'VR',
+    'X-Shopback-Domain': 'www.test.co.id',
+    'X-Shopback-Language': 'id',
+    'X-Shopback-Agent': 'asd/1.0',
+    'X-Shopback-Internal': '123123123123',
+    categoryId: 123123,
+    priority: 3,
+    domain: 'www.test.co.id'
+  }));
 });
